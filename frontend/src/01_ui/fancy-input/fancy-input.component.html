@@ -1,0 +1,5 @@
+<div class="w-full overflow-hidden rounded-md flex flex-col">
+    <label class="font-bold" [for]="id()">{{label()}}</label>
+    <input class="px-2 py-1" [type]="type()||'text'" [id]="id()" [placeholder]="placeholder()||label()">
+    <div class="">{{error()}}</div>
+</div>

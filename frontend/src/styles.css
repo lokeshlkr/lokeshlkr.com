@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+        font-family: StrangerSans;
+        src: url(/StrangerSans.ttf);
+}
+@font-face {
+         font-family:StrangerMono;
+        src: url(/StrangerMono.ttf);
+}
+@font-face {
+         font-family:Fira Mono;
+        src: url(/FiraMono-Regular.ttf);
+}
+@font-face {
+         font-family:Fira Sans;
+        src: url(/FiraSans-Regular.ttf);
+}
+
+/* global styles */
+@layer base{
+    .light{
+        --glass:#ccf5;
+        --bg:#dde;
+        --fg:#112;
+        --accent:#f0f;
+        --main:#116;
+    }
+    .dark{
+        --glass:#0025;
+        --bg:#112;
+        --fg:#dde;
+        --accent:#c0c;
+        --main:#116;
+    }
+}
+html{
+    @apply 
+    from-bg-lighter to-bg-darker bg-gradient-to-tr bg-fixed
+    text-fg
+}
+
+/* common utilities */
+.cc{@apply flex items-center justify-center}
+.glass{@apply bg-glass/30 backdrop-blur-md shadow-lg border-2 border-glass}
+
+
+/* elements */
+.btn{
+    @apply [--btn-bg:var(--bg)] px-2 py-1 rounded-md border-2 cursor-pointer
+    border-bg-lighter transition-all m-[2px]
+    bg-[var(--btn-bg)] shadow-btn-shadow shadow-[2px_2px_0px_0px]
+}
+.btn:not(:disabled){
+    @apply hover:shadow-[4px_4px_0px_0px] hover:scale-105 hover:shadow-btn-shadow 
+    active:scale-95 active:shadow-[1px_1px_0px_0px] active:shadow-btn-shadow
+}
+.btn:disabled{@apply blur-[2px]}
+.btn-primary{@apply [--btn-bg:var(--accent)] text-main}
