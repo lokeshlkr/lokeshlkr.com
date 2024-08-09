@@ -1,0 +1,12 @@
+<h1 class="text-center text-3xl">Manage your profile</h1>
+<div class="max-w-96 cc mx-auto py-4">
+    <form (submit)="onSubmit($event)" class="flex flex-col">
+        <tiar-input label="Name" [id]="'playerName'" [(value)]="name" [validator]="validateName"></tiar-input>
+        <tiar-input label="Color" [id]="'playerColor'" [(value)]="color" [validator]="validateColor"
+            type="color"></tiar-input>
+        <div class="self-end">
+            <button class="btn btn-primary" type="submit">Save</button>
+            <button class="btn" type="button" routerLink="/">Back</button>
+        </div>
+    </form>
+</div>

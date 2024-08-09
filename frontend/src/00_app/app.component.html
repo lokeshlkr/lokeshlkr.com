@@ -1,4 +1,4 @@
-<div class="text-5xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, unde nam excepturi eius cum,
+<!-- <div class="text-5xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, unde nam excepturi eius cum,
   assumenda possimus nulla neque, incidunt delectus dolor voluptatibus. Cumque eaque animi facilis magni fugiat quas?
   Esse.
   <icon class="kit"></icon>
@@ -11,7 +11,34 @@
     neque animi
     officia aut, totam quod rem itaque nisi debitis delectus officiis molestiae id nam nulla temporibus eaque. Eius, et.
   </div>
-</div>
+</div> -->
 
-<tiar-fancy-input [label]="'Full Name'" [id]="'full_name'" ></tiar-fancy-input>
-<tiar-fancy-input [label]="'Email ID'" [id]="'email_id'" [type]="'email'"></tiar-fancy-input>
+<!-- 
+<form action="" class="max-w-96 mx-auto">
+  <h1 class="text-3xl font-bold text-center">Your Info:</h1>
+  <tiar-input [label]="'Full Name'" [id]="'full_name'" [type]="'text'" [(value)]="name"
+    [error]="validate()"></tiar-input>
+  <tiar-input [label]="'Email ID'" [id]="'email_id'" [type]="'email'" [(value)]="email" [error]="validateEmail()">
+  </tiar-input>
+  <tiar-input [label]="'Color'" [id]="'color'" [type]="'color'" [(value)]="color" [error]="validateColor()">
+  </tiar-input>
+  <tiar-input [label]="'Date'" [id]="'date'" [type]="'date'" [(value)]="color" [error]="validateColor()">
+  </tiar-input>
+  <tiar-input [label]="'Checkbox'" [id]="'checkbox'" [type]="'checkbox'" [(value)]="color" [error]="validateColor()">
+  </tiar-input>
+  <tiar-input [label]="'File '" [id]="'file'" [type]="'file'" [(value)]="name" [error]="validateColor()">
+  </tiar-input>
+</form> -->
+<div class="site max-w-[800px] mx-auto bg-bg-lighter/20 p-4 min-h-[100dvh] h-[100dvh]">
+  <div class="container grid grid-rows-[min-content_1fr_min-content] gap-4 h-full">
+    <header class="text-center">
+      <h1 class="text-5xl font-bold">Three in a row!</h1>
+      <p>An online game inspired by a board game called <code>boop.</code></p>
+    </header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+    <footer>
+    </footer>
+  </div>
+</div>

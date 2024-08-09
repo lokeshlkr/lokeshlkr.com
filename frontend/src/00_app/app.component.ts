@@ -1,7 +1,8 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { IconComponent } from '../01_ui/icon/icon.component';
 import { FancyInputComponent } from "../01_ui/fancy-input/fancy-input.component";
+import { HomeComponent } from '../02_game/home/home.component';
 
 @Component({
   selector: 'tiar-root',
@@ -12,7 +13,7 @@ import { FancyInputComponent } from "../01_ui/fancy-input/fancy-input.component"
 })
 export class AppComponent {
   title = 'three-in-a-row';
-  constructor() {
+  constructor(private router: Router) {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
       this.setTheme();
     });
@@ -28,7 +29,6 @@ export class AppComponent {
       document.querySelector("html")?.classList.remove("dark")
     }
   }
-  validate(){
-    
-  }
+
+
 }

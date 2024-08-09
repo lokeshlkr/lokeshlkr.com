@@ -9,6 +9,9 @@ module.exports = {
       serif: "Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif"
     },
     extend: {
+      fontSize: {
+        "tiny": "0.625rem"
+      },
       colors: {
         "bg": {
           "lighter": "oklch(from var(--bg) calc(l + 0.1) c h / <alpha-value>)",
@@ -20,6 +23,10 @@ module.exports = {
           DEFAULT: "rgb(from var(--fg) r g b / <alpha-value>)",
           "darker": "oklch(from var(--fg) calc(l - 0.1) c h / <alpha-value>)",
         },
+        "error": "rgb(from var(--error) r g b / <alpha-value>)",
+        "success": "rgb(from var(--success) r g b / <alpha-value>)",
+        "warn": "rgb(from var(--warn) r g b / <alpha-value>)",
+        "info": "rgb(from var(--info) r g b / <alpha-value>)",
         "glass": "rgb(from var(--glass) r g b / <alpha-value>)",
         "accent": "rgb(from var(--accent) r g b / <alpha-value>)",
         "main": "rgb(from var(--main) r g b / <alpha-value>)",
